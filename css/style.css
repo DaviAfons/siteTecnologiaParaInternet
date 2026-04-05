@@ -1,0 +1,189 @@
+/* 1. RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. VARIÁVEIS DE CORES */
+:root {
+    --bg-color: #0d0d0d;       /* Fundo quase preto */
+    --text-color: #e0e0e0;     /* Texto cinzento claro para não cansar a vista */
+    --accent-color: #8b0000;   /* Vermelho escuro (tema heavy metal) */
+    --accent-hover: #ff1a1a;   /* Vermelho vivo para quando passamos o rato */
+    --card-bg: #1a1a1a;        /* Fundo das seções um pouco mais claro que o fundo principal */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 3. ESTILOS GERAIS DO CORPO DA PÁGINA */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6; /* Melhora a leitura dos textos */
+}
+
+/* 4. CABEÇALHO E NAVEGAÇÃO */
+header {
+    background-color: #000000;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--accent-color);
+    position: sticky; /* Mantém o menu no topo ao fazer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav img {
+    margin-bottom: 10px;
+}
+
+nav h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style: none; /* Remove as bolinhas das listas */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os links desçam de linha em telas menores */
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease; /* Animação suave ao mudar de cor */
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: var(--accent-hover);
+}
+
+/* 5. SEÇÕES DE CONTEÚDO */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 8px; /* Bordas ligeiramente arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+}
+
+h2 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p, ul, ol {
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 20px; /* Dá um recuo nas listas para ficarem alinhadas */
+}
+
+section a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* 6. FORMULÁRIO DE CONTATO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #0d0d0d;
+    color: #fff;
+    border-radius: 4px;
+    font-family: var(--font-main);
+}
+
+textarea {
+    resize: vertical; /* Permite ao utilizador aumentar a altura, mas não a largura */
+    min-height: 120px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* 7. GALERIA E IMAGENS */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria uma grade responsiva */
+    gap: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* 8. RODAPÉ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #777;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+}
