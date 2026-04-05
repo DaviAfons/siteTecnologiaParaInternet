@@ -7,11 +7,11 @@
 
 /* 2. VARIÁVEIS DE CORES */
 :root {
-    --bg-color: #0d0d0d;       /* Fundo quase preto */
-    --text-color: #e0e0e0;     /* Texto cinzento claro para não cansar a vista */
-    --accent-color: #8b0000;   /* Vermelho escuro (tema heavy metal) */
-    --accent-hover: #ff1a1a;   /* Vermelho vivo para quando passamos o rato */
-    --card-bg: #1a1a1a;        /* Fundo das seções um pouco mais claro que o fundo principal */
+    --bg-color: #0d0d0d;
+    --text-color: #e0e0e0;
+    --accent-color: #8b0000;
+    --accent-hover: #ff1a1a;
+    --card-bg: #1a1a1a;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -20,7 +20,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-main);
-    line-height: 1.6; /* Melhora a leitura dos textos */
+    line-height: 1.6;
 }
 
 /* 4. CABEÇALHO E NAVEGAÇÃO */
@@ -28,51 +28,93 @@ header {
     background-color: #000000;
     padding: 20px 0;
     border-bottom: 2px solid var(--accent-color);
-    position: sticky; /* Mantém o menu no topo ao fazer scroll */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 nav {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    padding: 15px 40px;
+    box-sizing: border-box;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-nav img {
-    margin-bottom: 10px;
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
 }
 
-nav h1 {
-    font-size: 2.5rem;
+.nav-brand img {
+    height: 40px;
+    width: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.nav-brand:hover img {
+    transform: scale(1.05);
+}
+
+.nav-brand h1 {
+    font-size: 1.5rem;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    margin: 0;
+    white-space: nowrap;
 }
 
 nav ul {
-    list-style: none; /* Remove as bolinhas das listas */
+    list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Permite que os links desçam de linha em telas menores */
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
     gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: var(--text-color);
+    text-decoration: none;
+    color: #e0e0e0;
     font-weight: bold;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    transition: color 0.3s ease; /* Animação suave ao mudar de cor */
-    padding: 5px 10px;
+    letter-spacing: 1px;
+    padding: 5px 0;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease-in-out;
 }
 
 nav a:hover {
-    color: var(--accent-hover);
+    color: #ffffff;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* 5. SEÇÕES DE CONTEÚDO */
@@ -81,8 +123,8 @@ section {
     margin: 40px auto;
     padding: 30px;
     background-color: var(--card-bg);
-    border-radius: 8px; /* Bordas ligeiramente arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -100,12 +142,15 @@ h3 {
     margin-bottom: 10px;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
     margin-bottom: 15px;
 }
 
-ul, ol {
-    margin-left: 20px; /* Dá um recuo nas listas para ficarem alinhadas */
+ul,
+ol {
+    margin-left: 20px;
 }
 
 section a {
@@ -133,7 +178,8 @@ label {
     color: #ffffff;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #333;
@@ -144,7 +190,8 @@ input, textarea {
 }
 
 textarea {
-    resize: vertical; /* Permite ao utilizador aumentar a altura, mas não a largura */
+    resize: vertical;
+    /* Permite ao utilizador aumentar a altura, mas não a largura */
     min-height: 120px;
 }
 
@@ -168,7 +215,8 @@ button:hover {
 /* 7. GALERIA E IMAGENS */
 .image-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria uma grade responsiva */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Cria uma grade responsiva */
     gap: 15px;
 }
 
