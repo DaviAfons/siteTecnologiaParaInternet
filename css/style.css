@@ -1,11 +1,9 @@
-/* 1. RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. VARIÁVEIS DE CORES */
 :root {
     --bg-color: #0d0d0d;
     --text-color: #e0e0e0;
@@ -15,7 +13,6 @@
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 3. ESTILOS GERAIS DO CORPO DA PÁGINA */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -23,7 +20,6 @@ body {
     line-height: 1.6;
 }
 
-/* 4. CABEÇALHO E NAVEGAÇÃO */
 header {
     background-color: #000000;
     padding: 20px 0;
@@ -56,7 +52,7 @@ nav {
 }
 
 .nav-brand img {
-    height: 40px;
+    height: 80px;
     width: auto;
     border-radius: 4px;
     transition: transform 0.3s ease;
@@ -117,7 +113,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* 5. SEÇÕES DE CONTEÚDO */
 section {
     max-width: 1000px;
     margin: 40px auto;
@@ -165,7 +160,6 @@ section a:hover {
     text-decoration: underline;
 }
 
-/* 6. FORMULÁRIO DE CONTATO */
 form {
     display: flex;
     flex-direction: column;
@@ -212,7 +206,6 @@ button:hover {
     background-color: var(--accent-hover);
 }
 
-/* 7. GALERIA E IMAGENS */
 .image-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -226,7 +219,6 @@ img {
     border-radius: 4px;
 }
 
-/* 8. RODAPÉ */
 footer {
     text-align: center;
     padding: 20px;
