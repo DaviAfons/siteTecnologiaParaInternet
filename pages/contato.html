@@ -2,13 +2,37 @@
 <html lang="pt-br">
 
 <head>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-57HDTQX6');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Black N' Dark</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KR07DM2F1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9KR07DM2F1');
+    </script>
+
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57HDTQX6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
         <nav>
             <div class="nav-brand">
@@ -30,35 +54,40 @@
         </nav>
     </header>
 
-    <section>
-        <h2>Contato</h2>
+    <main>
+        <section>
+            <h2>Contato</h2>
+            <p>Entre em contato conosco através dos canais abaixo:</p>
 
-        <p>Entre em contato conosco através dos canais abaixo:</p>
+            <ul>
+                <li>Email: contato@blackndark.com.br</li>
+                <li>Telefone: (11) 1234-5678</li>
+                <li>Endereço: Rua Exemplo, 123 - Brasil</li>
+            </ul>
+        </section>
 
-        <ul>
-            <li>Email: contato@blackndark.com.br</li>
-            <li>Telefone: (11) 1234-5678</li>
-            <li>Endereço: Rua Exemplo, 123 - Brasil</li>
-        </ul>
+        <section>
+            <h3>Envie uma Mensagem</h3>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
-        <form action="#" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
 
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-
-    </section>
-
-        <footer>
+    <footer>
         <p>&copy; Davi Afonso | 5171057</p>
     </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
